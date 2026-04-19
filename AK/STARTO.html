@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTO メンバーリスト</title>
+    <link rel="stylesheet" href="STARTO.css">
+</head>
+<body>
+    <div style="margin: 10px 0;">
+        <button type="button" onclick="changeSort('age')">年齢順</button>
+        <button type="button" onclick="changeSort('joined')">入所順</button>
+    </div>
+
+    <div class="filter-group">
+        <h2 id="listTitle">メンバーリスト（年齢順）</h2>
+        <div class="filter-controls">
+            <label><input type="checkbox" class="group-filter" value="WEST." checked>WEST.</label>
+            <label><input type="checkbox" class="group-filter" value="Snow Man" checked>Snow Man</label>
+            <label><input type="checkbox" class="group-filter" value="SixTONES" checked>SixTONES</label>
+
+            <div id="monthFilterArea" style="margin-top: 10px;">
+                <strong>誕生月:</strong>
+                <label><input type="checkbox" class="month-filter" value="2" checked> 2月</label>
+                <label><input type="checkbox" class="month-filter" value="3" checked> 3月</label>
+                <label><input type="checkbox" class="month-filter" value="5" checked> 5月</label>
+                <label><input type="checkbox" class="month-filter" value="6" checked> 6月</label>
+                <label><input type="checkbox" class="month-filter" value="7" checked> 7月</label>
+                <label><input type="checkbox" class="month-filter" value="8" checked> 8月</label>
+                <label><input type="checkbox" class="month-filter" value="10" checked> 10月</label>
+                <label><input type="checkbox" class="month-filter" value="11" checked> 11月</label>
+                <label><input type="checkbox" class="month-filter" value="12" checked> 12月</label>
+                <button type="button" onclick="selectAll('.month-filter', true)">全選択</button>
+            </div>
+            <button id="updateButton" style="margin-top: 10px; cursor: pointer;">表示を更新</button>
+        </div>
+        <div id="resultContainer" style="margin-top: 20px;"></div>
+    </div>
+
+<script>
+    const members = [
+        { group: "WEST.", name: "中間 淳太", birthday: "1987-10-21", joined: "2003-02-10", color: "#FFFF00" },
+        { group: "WEST.", name: "濵田 崇裕", birthday: "1988-12-19", joined: "2002-07-13", color: "#800080" },
+        { group: "WEST.", name: "桐山 照史", birthday: "1989-08-31", joined: "2002-07-13", color: "#FFA500" },
+        { group: "WEST.", name: "重岡 大毅", birthday: "1992-08-26", joined: "2006-10-08", color: "#FF0000" },
+        { group: "WEST.", name: "神山 智洋", birthday: "1993-07-01", joined: "2004-02-21", color: "#32cd32" },
+        { group: "WEST.", name: "藤井 流星", birthday: "1993-08-18", joined: "2004-10-08", color: "#0000FF" },
+        { group: "WEST.", name: "小瀧 望", birthday: "1996-07-30", joined: "2008-07-17", color: "#FF69B4" },
+        { group: "Snow Man", name: "深澤 辰哉", birthday: "1992-05-05", joined: "2004-08-12", color: "#800080" },
+        { group: "Snow Man", name: "佐久間 大介", birthday: "1992-07-05", joined: "2005-09-25", color: "#FF69B4" },
+        { group: "Snow Man", name: "渡辺 翔太", birthday: "1992-11-05", joined: "2005-06-26", color: "#0000FF" },
+        { group: "Snow Man", name: "宮舘 涼太", birthday: "1993-03-25", joined: "2005-10-01", color: "#FF0000" },
+        { group: "Snow Man", name: "岩本 照", birthday: "1993-05-17", joined: "2006-10-01", color: "#FFFF00" },
+        { group: "Snow Man", name: "阿部 亮平", birthday: "1993-11-27", joined: "2004-08-12", color: "#32cd32" },
+        { group: "Snow Man", name: "向井 康二", birthday: "1994-06-21", joined: "2006-10-08", color: "#FFA500" },
+        { group: "Snow Man", name: "目黒 蓮", birthday: "1997-02-16", joined: "2010-10-30", color: "#333333" },
+        { group: "Snow Man", name: "ラウール", birthday: "2003-06-27", joined: "2015-05-02", color: "#ffffff" },
+        { group: "SixTONES", name: "髙地 優吾", birthday: "1994-03-08", joined: "2009-05-24", color: "#FFFF00" },
+        { group: "SixTONES", name: "京本 大我", birthday: "1994-12-03", joined: "2006-05-04", color: "#FF69B4" },
+        { group: "SixTONES", name: "田中 樹", birthday: "1995-06-15", joined: "2008-04-20", color: "#0000FF" },
+        { group: "SixTONES", name: "松村 北斗", birthday: "1995-06-18", joined: "2009-02-15", color: "#333333" },
+        { group: "SixTONES", name: "ジェシー", birthday: "1996-06-11", joined: "2006-09-11", color: "#FF0000" },
+        { group: "SixTONES", name: "森本 慎太郎", birthday: "1997-07-15", joined: "2006-10-01", color: "#008000" }
+    ];
+
+    let currentSortMode = 'age';
+
+    function changeSort(mode) {
+        currentSortMode = mode;
+        const title = document.getElementById('listTitle');
+        const monthArea = document.getElementById('monthFilterArea');
+
+        if (mode === 'age') {
+            title.innerText = "メンバーリスト（年齢順）";
+            monthArea.style.display = "block";
+        } else {
+            title.innerText = "メンバーリスト（入所順）";
+            monthArea.style.display = "none";
+        }
+        renderMemberTable();
+    }
+
+    function calculateAge(birthdayString) {
+        const birthDate = new Date(birthdayString);
+        const today = new Date();
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+
+    function renderMemberTable() {
+        const container = document.getElementById('resultContainer');
+        container.innerHTML = "";
+
+        const checkedGroups = Array.from(document.querySelectorAll('.group-filter:checked')).map(cb => cb.value);
+        
+        let filtered = members.filter(m => {
+            const groupMatch = checkedGroups.includes(m.group);
+            if (currentSortMode === 'age') {
+                const checkedMonths = Array.from(document.querySelectorAll('.month-filter:checked')).map(cb => parseInt(cb.value));
+                const birthMonth = new Date(m.birthday).getMonth() + 1;
+                return groupMatch && checkedMonths.includes(birthMonth);
+            }
+            return groupMatch;
+        });
+
+        filtered.sort((a, b) => {
+            if(currentSortMode === 'age'){
+                return new Date(a.birthday) - new Date(b.birthday);
+            } else {
+                return new Date(a.joined) - new Date(b.joined);
+            }
+        });
+
+        if (filtered.length === 0) {
+            container.innerHTML = "<p>該当するメンバーがいません。</p>";
+            return;
+        }
+
+        // ソートモードに合わせてヘッダーの配列を定義
+        let headers = [];
+        if (currentSortMode === 'age') {
+            headers = ["グループ", "名前", "誕生日", "年齢", "入所日"];
+        } else {
+            headers = ["グループ", "名前", "入所日", "年齢", "誕生日"];
+        }
+
+        let tableHtml = `<table id="memberTable"><thead><tr>`;
+        headers.forEach(h => { tableHtml += `<th>${h}</th>`; });
+        tableHtml += `</tr></thead><tbody>`;
+
+        tableHtml += filtered.map(member => {
+            const isDarkColor = ["#333333", "#800080", "#0000FF", "#008000"].includes(member.color);
+            const textColor = isDarkColor ? "#ffffff" : "#000000";
+            
+            const bday = member.birthday.replace(/-/g, '/');
+            const age = `${calculateAge(member.birthday)}歳`;
+            const joined = member.joined.replace(/-/g, '/');
+
+            // ソートモードに合わせて列の値を格納
+            let rowCells = [];
+            if (currentSortMode === 'age') {
+                rowCells = [member.group, member.name, bday, age, joined];
+            } else {
+                rowCells = [member.group, member.name, joined, age, bday];
+            }
+
+            let rowHtml = `<tr style="background-color: ${member.color}; color: ${textColor};">`;
+            rowCells.forEach(cell => { rowHtml += `<td>${cell}</td>`; });
+            rowHtml += `</tr>`;
+            return rowHtml;
+        }).join('');
+
+        tableHtml += `</tbody></table>`;
+        container.innerHTML = tableHtml;
+    }
+
+    document.getElementById('updateButton').addEventListener('click', renderMemberTable);
+    window.addEventListener('DOMContentLoaded', renderMemberTable);
+
+    function selectAll(className, status) {
+        document.querySelectorAll(className).forEach(cb => cb.checked = status);
+    }
+</script>
+</body>
+</html>

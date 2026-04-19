@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CD</title>
+    <link rel="stylesheet" href="CD.css">
+</head>
+<body>
+    <ul>CDリリース一覧</ul>
+    <div class="controls">
+        <div class="filter-group">
+            <span class="filter-label">発行年:</span>
+            <label><input type="checkbox" class="year" value="2020" checked>2020</label>
+            <label><input type="checkbox" class="year" value="2021" checked>2021</label>
+            <label><input type="checkbox" class="year" value="2022" checked>2022</label>
+            <label><input type="checkbox" class="year" value="2023" checked>2023</label>
+            <label><input type="checkbox" class="year" value="2024" checked>2024</label>
+            <label><input type="checkbox" class="year" value="2025" checked>2025</label>
+        </div>
+
+        <div class="filter-group">
+            <span class="filter-label">種類</span>
+            <label><input type="checkbox" class="type" value="single" checked>シングル</label>
+            <label><input type="checkbox" class="type" value="album" checked>アルバム</label>
+        </div>
+        <button id="selectAll">全て選択</button>
+        <button id="updateView">表示する</button>
+    </div>
+    
+    <table border="1">
+        <tr>
+            <th><div class="single">シングル</div><div class="album">アルバム</div></th>
+            <th></th>
+            <th>タイトル</th>
+            <th>発売日</th>
+        </tr>
+    </table>
+
+    <div class="year-selection" data-year="2020">
+        <h2>2020年</h2>
+        <table border="1">
+        <tr class="single">
+            <th class="single">1st Debut Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1031005.jpg" width="50"></th>
+            <th>D.D.</th>
+            <th>01/21</th>
+        </tr>
+        <tr class="single">
+            <th class="single">2nd Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1031548.jpg" width="50"></th>
+            <th>KISSIN'MY LIPS/Stories</th>
+            <th>10/07</th>
+        </tr>
+        </table>
+    </div>
+    
+    <div class="year-selection" data-year="2021">
+        <h2>2021年</h2>
+        <table border="1">
+        <tr class="single">
+            <th class="single">3rd Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1032082.jpg" width="50"></th>
+            <th>Grandeur</th>
+            <th>01/20</th>
+            </tr>
+        <tr class="single">
+            <th class="single">4th Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1033147.jpg" width="50"></th>
+            <th>HELLO HELLO</th>
+            <th>07/14</th>
+        </tr>
+        <tr class="album">
+            <th class="album">1st ALBUM</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1033388.jpg" width="50"></th>
+            <th>Snow Mania S1</th>
+            <th>09/29</th>
+        </tr>
+        <tr class="single">
+            <th class="single">5th Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1033601.jpg" width="50"></th>
+            <th>Secret Touch</th>
+            <th>12/01</th>
+        </tr>
+        </table>
+    </div>
+
+    <div class="year-selection" data-year="2022">
+        <h2>2022年</h2>
+        <table border="1">
+        <tr class="single">
+            <th class="single">6th Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1033990.jpg" width="50"></th>
+            <th>ブラザービート</th>
+            <th>03/30</th>
+        </tr>
+        <tr class="single">
+            <th class="single">7th Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1034417.jpg" width="50"></th>
+            <th>オレンジkiss</th>
+            <th>07/13</th>
+        </tr>
+        <tr class="album">
+            <th class="album">2nd ALBUM</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1034669.jpg" width="50"></th>
+            <th>Snow Labo.S2</th>
+            <th>09/21</th>
+        </tr>
+        </table>
+    </div>
+
+    <div class="year-selection" data-year="2023">
+        <h2>2023年</h2>
+        <table border="1">
+        <tr class="single">
+            <th class="single">8th Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1035173.jpg" width="50"></th>
+            <th>タペストリー/W</th>
+            <th>03/15</th>
+        </tr>
+        <tr class="album">
+            <th class="album">3rd ALBUM</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1035358.jpg" width="50"></th>
+            <th>i DO ME</th>
+            <th>05/17</th>
+        </tr>
+        <tr class="single">
+            <th class="single">9th Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1035691.jpg" width="50"></th>
+            <th>Dangerholic</th>
+            <th>09/06</th>
+        </tr>
+        </table>
+    </div>
+
+    <div class="year-selection" data-year="2024">
+        <h2>2024年</h2>
+        <table border="1">
+        <tr class="single">
+            <th class="single">10th Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1036040.jpg" width="50"></th>
+            <th>LOVE TRIGGER/We'll go together</th>
+            <th>02/14</th>
+        </tr>
+        <tr class="single">
+            <th class="single">11th Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1036523.jpg" width="50"></th>
+            <th>BREAKOUT/君は僕のもの</th>
+            <th>07/31</th>
+        </tr>
+        <tr class="album">    
+            <th class="album">4th ALBUM</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1036848.jpg" width="50"></th>
+            <th>RAYS</th>
+            <th>10/30</th>
+        </tr>
+        </table>
+    </div>
+
+    <div class="year-selection" data-year="2025">
+        <h2>2025年</h2>
+        <table border="1">
+        <tr class="album">
+            <th class="album">BEST ALBUM</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1037097.jpg" width="50"></th>
+            <th>THE BEST 2020-2025</th>
+            <th>01/22</th>
+        </tr>
+        <tr class="single">
+            <th class="single">12th Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1037700.jpg" width="50"></th>
+            <th>SERIOUS</th>
+            <th>07/23</th>
+        </tr>
+        <tr class="single">
+            <th class="single">Degital Single</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1037946.jpg" width="50"></th>
+            <th>カリスマックス</th>
+            <th>08/25</th>
+        </tr>
+        <tr class="album">
+            <th class="album">5th ALBUM</th>
+            <th><img src="https://img.imageimg.net/artist/snowman/img/product_1037986.jpg" width="50"></th>
+            <th>音故知新</th>
+            <th>11/05</th>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>
+
+
+<script>
+    const yearCheckboxes = document.querySelectorAll('.year');
+    const typeCheckboxes = document.querySelectorAll('.type');
+    const sections = document.querySelectorAll('.year-selection');
+    const updateBtn = document.getElementById('updateView');
+    const selectAllBtn = document.getElementById('selectAll');
+
+    // 「全て選択/解除」の切り替え
+    selectAllBtn.addEventListener('click', () => {
+        const allCheckboxes = [...yearCheckboxes, ...typeCheckboxes];
+        const anyUnchecked = allCheckboxes.some(cb => !cb.checked);
+        allCheckboxes.forEach(cb => cb.checked = anyUnchecked);
+    });
+
+    // 表示の更新
+    updateBtn.addEventListener('click', () => {
+        // 現在チェックされている年と種類を取得
+        const selectedYears = Array.from(yearCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+        const selectedTypes = Array.from(typeCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+
+        sections.forEach(section => {
+            const sectionYear = section.getAttribute('data-year');
+            const isYearMatch = selectedYears.includes(sectionYear);
+            
+            // 1. まず年セクション自体の表示/非表示
+            section.style.display = isYearMatch ? 'block' : 'none';
+
+            if (isYearMatch) {
+                // 2. セクション内の各行（Single/Album）の表示/非表示
+                const rows = section.querySelectorAll('tr');
+                let visibleRowsCount = 0;
+
+                rows.forEach(row => {
+                    // ヘッダー行以外を判定
+                    if (row.classList.contains('single') || row.classList.contains('album')) {
+                        const isSingle = row.classList.contains('single');
+                        const isAlbum = row.classList.contains('album');
+                            
+                        const showRow = (isSingle && selectedTypes.includes('single')) || 
+                                        (isAlbum && selectedTypes.includes('album'));
+                            
+                            row.style.display = showRow ? 'table-row' : 'none';
+                            if (showRow) visibleRowsCount++;
+                    }
+                });
+
+                // 3. その年に表示すべきデータが1つもない場合は、年タイトルごと隠す
+                section.style.display = (visibleRowsCount > 0) ? 'block' : 'none';
+            }
+        });
+    });
+</script>

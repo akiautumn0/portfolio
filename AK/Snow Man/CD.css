@@ -1,0 +1,25 @@
+.single{
+    color: red;
+}
+
+.album{
+    color: blue;
+}
+
+table{
+    width: 600px;
+}
+
+th:nth-child(1), td:nth-child(1){
+    width: 150px;
+}
+th:nth-child(2), td:nth-child(2){
+    width: 50px;
+}
+th:nth-child(3), td:nth-child(3){
+    width: auto;
+    white-space: nowrap;
+}
+th:nth-child(4), td:nth-child(4){
+    width: 100px;
+}
