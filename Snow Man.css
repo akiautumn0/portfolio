@@ -1,0 +1,134 @@
+/* 基本設定 */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ヘッダー */
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+}
+
+.debut {
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 画像 */
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    filter: grayscale(20%); /* 少し彩度を落としてクールに */
+    transition: filter 0.3s;
+}
+
+.profile-image img:hover {
+    filter: grayscale(0%);
+}
+
+/* ナビゲーションボタン */
+.sub-menu {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.btn-release:hover{
+    background-color: #bdc3c7;
+    color:#333;
+}
+
+.btn-live:hover{
+    background-color: #bdc3c7;
+    color:#333;
+}
+
+/* メンバーリスト */
+.member-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.member-list h2 {
+    border-left: 5px solid #333;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.member-list ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列に並べる */
+    gap: 10px;
+}
+
+.member-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    display: block;
+    padding: 8px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.member-list li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.member-list li a:hover {
+    color: #fff;
+}
+
+/* 個別のメンバーカラー設定 */
+.member-list li a.iwamoto:hover { background-color: #ffeb3b; color: #333; } /* 黄色は黒文字の方が見やすいです */
+.member-list li a.fukazawa:hover { background-color: #9c27b0; } /* 紫 */
+.member-list li a.raul:hover { background-color: #ffffff; color: #333; border: 1px solid #ccc; } /* 白 */
+.member-list li a.watanabe:hover { background-color: #2196f3; } /* 青 */
+.member-list li a.mukai:hover { background-color: #FFA500; }    /* 橙 */
+.member-list li a.abe:hover { background-color: #4caf50; }      /* 緑 */
+.member-list li a.meguro:hover { background-color: #000000; }   /* 黒 */
+.member-list li a.miyadate:hover { background-color: #f44336; } /* 赤 */
+.member-list li a.sakuma:hover { background-color: #FF69B4; }   /* 桃 */
