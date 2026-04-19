@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ</title>
+    <link rel="stylesheet" href="omikuji.css">
+</head>
+<body>
+    <p class="message">今日のあなたの運勢は？</p>
+    <img id ="box" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmg2kn9DyMES8p81iw0-civQjYw0bIDleQAH8gOAp_mv75OnJaeBgcv6vsVIRNnHT-BTuDfmmQ4X8bgRi3U6tQdG-m5C0nYzWahyDp4vyYTPs7BvcsAZVIhzkHt-scsWxKhE3B3JMs_Y8/s400/syougatsu2_omijikuji2.png" alt="" onclick="show()">
+    <div id="result" class="result">
+        <div id="luck" class="luck"></div>
+        <div id="detail" class="detail"></div>
+    </div>
+    <button id="retry" class="retry" onclick="again()">
+        もう一度占う
+    </button>
+    <script src="omikuji.js"></script>
+</body>
+</html>

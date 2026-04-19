@@ -1,0 +1,32 @@
+.message {
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+.img{
+    width: 300px;
+    margin: 15px auto;
+}
+.result{
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    background-color: white;
+    border: 7px double red;
+    width: 180px;
+    height: 200px;
+    margin: 50px auto;
+}
+.detail{
+    font-size: 20px;
+    width: 80%;
+    border-top: 2px solid black;
+    margin: 5px auto;
+}
+.retry{
+    font-size: 20px;
+    width: 200px;
+    margin: 5px auto;
+}
