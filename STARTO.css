@@ -1,0 +1,21 @@
+/* STARTO.css */
+#memberTable {
+    width: 800px; /* 列が増えたので少し広げます */
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 3px double #333;
+    table-layout: auto; /* fixedからautoに変更：中身に合わせて幅を調整 */
+}
+
+#memberTable th, #memberTable td {
+    border: 3px double #333;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* 特定の列幅固定を解除するか、順番に依存しない設定にします */
+#memberTable th {
+    background-color: #eee;
+    color: #333;
+}
