@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARTO メンバーリスト</title>
+    <link rel="stylesheet" href="STARTO.css">
+</head>
+<body>
+    <div class="container">
+        <h1>STARTO メンバー検索</h1>
+
+        <div class="control-panel">
+            <div class="control-row">
+                <label class="label-title">表示順：</label>
+                <select id="sortSelect" onchange="changeSort(this.value)">
+                    <option value="age">年齢順（誕生日基準）</option>
+                    <option value="joined">入所順（入所日基準）</option>
+                </select>
+            </div>
+
+            <div class="control-row">
+                <span class="label-title">グループ:</span>
+                <div id="groupFilterArea" class="checkbox-group"></div>
+            </div>
+
+            <div class="control-row">
+                <span id="monthTitle" class="label-title">対象月:</span>
+                <div id="monthFilterArea" class="checkbox-group"></div>
+                <div class="button-group">
+                    <button type="button" class="btn-sub" onclick="selectAll('.month-filter', true)">全選択</button>
+                    <button type="button" class="btn-sub" onclick="selectAll('.month-filter', false)">全解除</button>
+                </div>
+            </div>
+
+            <button id="updateButton" class="btn-main">表示を更新</button>
+        </div>
+
+        <h2 id="listTitle">メンバーリスト</h2>
+        <div id="resultContainer" class="table-wrapper"></div>
+    </div>
+    <script src="STARTO.js"></script>
+</body>
+</html>
