@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow Man CD Release List</title>
+    <link rel="stylesheet" href="CD.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CD Release List</h1>
+        
+        <div class="controls">
+            <div class="filter-group">
+                <span class="filter-label">発行年</span>
+                <div class="checkbox-wrapper">
+                    <label><input type="checkbox" class="year" value="2020" checked>2020</label>
+                    <label><input type="checkbox" class="year" value="2021" checked>2021</label>
+                    <label><input type="checkbox" class="year" value="2022" checked>2022</label>
+                    <label><input type="checkbox" class="year" value="2023" checked>2023</label>
+                    <label><input type="checkbox" class="year" value="2024" checked>2024</label>
+                    <label><input type="checkbox" class="year" value="2025" checked>2025</label>
+                    <label><input type="checkbox" class="year" value="2026" checked>2026</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <span class="filter-label">種類</span>
+                <div class="checkbox-wrapper">
+                    <label><input type="checkbox" class="type" value="single" checked>シングル</label>
+                    <label><input type="checkbox" class="type" value="album" checked>アルバム</label>
+                    <label><input type="checkbox" class="type" value="digital" checked>デジタル</label>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="selectAll" class="btn-secondary">全選択</button>
+                <button id="clearAll" class="btn-secondary">全解除</button>
+            </div>
+        </div>
+
+        <div id="release-container">
+            <div class="year-section" data-year="2020">
+                <h2 class="year-title">2020年</h2>
+                <table class="data-table">
+                    <tr class="single">
+                        <td class="type-label">1st Debut Single</td>
+                        <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1031005.jpg" alt="D.D."></td>
+                        <td class="title-cell">D.D. / Imitation Rain</td> 
+                        <td class="date-cell">01/22</td>
+                    </tr>
+                    <tr class="single">
+                        <td class="type-label">2nd Single</td>
+                        <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1031548.jpg" alt="KISSIN'"></td>
+                        <td class="title-cell">KISSIN' MY LIPS / Stories</td>
+                        <td class="date-cell">10/07</td>
+                    </tr>
+                </table>
+            </div>
+
+    <div class="year-section" data-year="2021">
+        <h2 class="year-title">2021年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">3rd Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1032082.jpg"></td>
+                <td class="title-cell">Grandeur</td>
+                <td class="date-cell">01/20</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">4th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1033147.jpg"></td>
+                <td class="title-cell">HELLO HELLO</td>
+                <td class="date-cell">07/14</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">1st ALBUM</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1033388.jpg"></td>
+                <td class="title-cell">Snow Mania S1</td>
+                <td class="date-cell">09/29</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">5th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1033601.jpg"></td>
+                <td class="title-cell">Secret Touch</td>
+                <td class="date-cell">12/01</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2022">
+        <h2 class="year-title">2022年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">6th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1033990.jpg"></td>
+                <td class="title-cell">ブラザービート</td>
+                <td class="date-cell">03/30</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">7th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1034417.jpg"></td>
+                <td class="title-cell">オレンジkiss</td>
+                <td class="date-cell">07/13</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">2nd ALBUM</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1034669.jpg"></td>
+                <td class="title-cell">Snow Labo. S2</td>
+                <td class="date-cell">09/21</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2023">
+        <h2 class="year-title">2023年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">8th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1035173.jpg"></td>
+                <td class="title-cell">タペストリー / W</td>
+                <td class="date-cell">03/15</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">3rd ALBUM</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1035358.jpg"></td>
+                <td class="title-cell">i DO ME</td>
+                <td class="date-cell">05/17</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">9th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1035691.jpg"></td>
+                <td class="title-cell">Dangerholic</td>
+                <td class="date-cell">09/06</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2024">
+        <h2 class="year-title">2024年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">10th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1036040.jpg"></td>
+                <td class="title-cell">LOVE TRIGGER / We'll go together</td>
+                <td class="date-cell">02/14</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">11th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1036523.jpg"></td>
+                <td class="title-cell">BREAKOUT / 君は僕のもの</td>
+                <td class="date-cell">07/31</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">4th ALBUM</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1036848.jpg"></td>
+                <td class="title-cell">RAYS</td>
+                <td class="date-cell">10/30</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2025">
+        <h2 class="year-title">2025年</h2>
+        <table class="data-table">
+            <tr class="album">
+                <td class="type-label">BEST ALBUM</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1037097.jpg"></td>
+                <td class="title-cell">THE BEST 2020-2025</td>
+                <td class="date-cell">01/22</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">12th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1037700.jpg"></td>
+                <td class="title-cell">SERIOUS</td>
+                <td class="date-cell">07/23</td>
+            </tr>
+            <tr class="digital">
+                <td class="type-label">Digital Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1037946.jpg"></td>
+                <td class="title-cell">カリスマックス</td>
+                <td class="date-cell">08/25</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">5th ALBUM</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1037986.jpg"></td>
+                <td class="title-cell">音故知新</td>
+                <td class="date-cell">11/05</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2026">
+        <h2 class="year-title">2026年</h2>
+        <table class="data-table">
+            <tr class="digital">
+                <td class="type-label">Digital Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1038351.jpg"></td>
+                <td class="title-cell">STARS</td>
+                <td class="date-cell">02/02</td>
+            </tr>
+            <tr class="digital">
+                <td class="type-label">Digital Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1038390.jpg"></td>
+                <td class="title-cell">オドロウゼ！</td>
+                <td class="date-cell">02/23</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">13th Single</td>
+                <td class="jacket-cell"><img src="https://img.imageimg.net/artist/snowman/img/product_1038451.jpg"></td>
+                <td class="title-cell">BANG!! / SAVE YOUR HAERT / オドロウゼ！</td>
+                <td class="date-cell">07/23</td>
+            </tr>
+        </table>
+    </div><script src="CD.js"></script>
+    <footer class="back-home">
+        <a href="Snow Man.html" class="btn-back">Snow Man 一覧へ戻る</a>
+    </footer>
+</body>
+</html>
