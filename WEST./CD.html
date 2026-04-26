@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEST. CD Release List</title>
+    <link rel="stylesheet" href="CD.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CD Release List</h1>
+
+        <div class="controls">
+            <div class="filter-group">
+                <span class="filter-label">発行年</span>
+                <div class="checkbox-wrapper">
+                    <label><input type="checkbox" class="year" value="2014" checked>2014</label>
+                    <label><input type="checkbox" class="year" value="2015" checked>2015</label>
+                    <label><input type="checkbox" class="year" value="2016" checked>2016</label>
+                    <label><input type="checkbox" class="year" value="2017" checked>2017</label>
+                    <label><input type="checkbox" class="year" value="2018" checked>2018</label>
+                    <label><input type="checkbox" class="year" value="2019" checked>2019</label>
+                    <label><input type="checkbox" class="year" value="2020" checked>2020</label>
+                    <label><input type="checkbox" class="year" value="2021" checked>2021</label>
+                    <label><input type="checkbox" class="year" value="2022" checked>2022</label>
+                    <label><input type="checkbox" class="year" value="2023" checked>2023</label>
+                    <label><input type="checkbox" class="year" value="2024" checked>2024</label>
+                    <label><input type="checkbox" class="year" value="2025" checked>2025</label>
+                    <label><input type="checkbox" class="year" value="2026" checked>2026</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <span class="filter-label">種類</span>
+                <div class="checkbox-wrapper">
+                    <label><input type="checkbox" class="type" value="single" checked>シングル</label>
+                    <label><input type="checkbox" class="type" value="album" checked>アルバム</label>
+                    <label><input type="checkbox" class="type" value="digital" checked>デジタル</label>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="selectAll" class="btn-secondary">全選択</button>
+                <button id="clearAll" class="btn-secondary">全解除</button>
+            </div>
+        </div>
+
+    <div id="release-container">
+        <div class="year-section" data-year="2014">
+            <h2 class="year-title">2014年</h2>
+            <table class="data-table">
+                <tr class="single">
+                    <td class="type-label">Debut Single</td>
+                    <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/7c3/4e3678c716346eb209484fdaea615.jpg" width="50" height="50" alt="ええじゃないか"></td>
+                    <td class="title-cell">ええじゃないか</td>
+                    <td class="date-cell">04/23</td>
+                </tr>
+                <tr class="album">
+                    <td class="type-label">1st ALBUM</td>
+                    <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/26f/844ae9f13e4134014787145a024ca.jpg" width="50" height="50" alt="go WEST よーいドン！"></td>
+                    <td class="title-cell">go WEST よーいドン！</td>
+                    <td class="date-cell">08/06</td>
+                </tr>
+                <tr class="single">
+                    <td class="type-label">2nd Single</td>
+                    <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/1c2/ad057113f76ed60ada1e248d6190b.jpg" width="50" height="50" alt="ジパング・おおきに大作戦 / 夢を抱きしめて"></td>
+                    <td class="title-cell">ジパング・おおきに大作戦 / 夢を抱きしめて</td>
+                    <td class="date-cell">10/08</td>
+                </tr>
+            </table>
+        </div>
+
+    <div class="year-section" data-year="2015">
+        <h2 class="year-title">2015年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">3rd Single</td>
+                <td><img src="https://www.elov-label.jp/images/45/6dd/f5d24b8f9a0359341bb9d332bc48d.jpg" width="50" height="50" alt="ズンドコパラダイス"></td>
+                <td>ズンドコパラダイス</td>
+                <td>02/04</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">2nd ALBUM</td>
+                <td><img src="https://www.elov-label.jp/images/45/fdf/f19bdae42981ebc194a45e0c0b973.jpg" width="50" height="50" alt="パリピポ"></td>
+                <td>パリピポ</td>
+                <td>04/22</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">4th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/8ae/eb6d14dad6ae48af3cb8402d816b2.jpg" width="50" height="50" alt="バリ ハピ"></td>
+                <td class="title-cell">バリ ハピ</td>
+                <td class="date-cell">07/29</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">3rd ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/af4/e07c9479708dd1977f62105fcd6cc.jpg" width="50" height="50" alt="ラッキィィィィィィィ7"></td>
+                <td class="title-cell">ラッキィィィィィィィ7</td>
+                <td class="date-cell">12/09</td>
+            </tr>
+        </table>
+    </div>
+        
+    <div class="year-section" data-year="2016">
+        <h2 class="year-title">2016年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">5th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/ba6/bda5b92080311b213aa57e330043c.jpg" width="50" height="50" alt="逆転Winner"></td>
+                <td class="title-cell">逆転Winner</td>
+                <td class="date-cell">04/20</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">6th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/9c4/06903dbe128bbef4608731bbe0b99.jpg" width="50" height="50" alt="人生は素晴らしい"></td>
+                <td class="title-cell">人生は素晴らしい</td>
+                <td class="date-cell">07/27</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">4th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/8a3/de76da6b19bb306cdc73958e8b3f9.jpg" width="50" height="50" alt="なうぇすと"></td>
+                <td class="title-cell">なうぇすと</td>
+                <td class="date-cell">11/30</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2017">
+        <h2 class="year-title">2017年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">7th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/2f6/7906735ac33b31272eb19e3aa77b8.jpg" width="50" height="50" alt="おーさか☆愛・EYE・哀"></td>
+                <td class="title-cell">おーさか☆愛・EYE・哀／Ya! Hot! Hot!</td>
+                <td class="date-cell">06/21</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">8th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/45b/6c6a70c543684532f41f69ce5c018.jpg" width="50" height="50" alt="僕ら今日も生きている"></td>
+                <td class="title-cell">僕ら今日も生きている／考えるな、燃えろ!!</td>
+                <td class="date-cell">11/22</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2018">
+        <h2 class="year-title">2018年</h2>
+        <table class="data-table">
+            <tr class="album">
+                <td class="type-label">5th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/0ca/62e4c0f8ad8a9e24d5d665dd63fd7.jpg" width="50" height="50" alt="WESTival"></td>
+                <td class="title-cell">WESTival</td>
+                <td class="date-cell">01/02</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">9th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/7bf/3eb2d0bf7252611f388d21b1afef3.jpg" width="50" height="50" alt="プリンシパルの君へ / ドラゴンドッグ"></td>
+                <td class="title-cell">プリンシパルの君へ / ドラゴンドッグ</td>
+                <td class="date-cell">03/07</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">10th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/9e1/226e51e4420d63480232188e01789.jpg" width="50" height="50" alt="スタートダッシュ！"></td>
+                <td class="title-cell">スタートダッシュ！</td>
+                <td class="date-cell">08/15</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">6th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/79b/c72b057d1ec2c5f43e1601a6e6beb.jpg" width="50" height="50" alt="WESTV！"></td>
+                <td class="title-cell">WESTV！</td>
+                <td class="date-cell">12/05</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2019">
+        <h2 class="year-title">2019年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">11th Single</td>
+                <td class="jacket-cell"><img src="https://starto.jp/images/81/ef1/8d25ff9af8ad5ddf137f4ca4e621c.jpg" width="50" height="50" alt="ホメチギリスト / 傷だらけの愛"></td>
+                <td>ホメチギリスト / 傷だらけの愛</td>
+                <td class="date-cell">01/30</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">12th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/a84/276b698143f53ec986aa29e737f81.jpg" width="50" height="50" alt="アメノチハレ"></td>
+                <td class="title-cell">アメノチハレ</td>
+                <td class="date-cell">04/24</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">13th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/edd/afdbe624625fbeeb61b8a12451df9.jpg" width="50" height="50" alt="Big Shot!!"></td>
+                <td class="title-cell">Big Shot!!</td>
+                <td class="date-cell">10/09</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2020">
+        <h2 class="year-title">2020年</h2>
+        <table class="data-table">
+            <tr class="album">
+                <td class="type-label">7th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/165/846cc1c9e95363ad064d0945d1488.jpg" width="50" height="50" alt="W trouble"></td>
+                <td class="title-cell">W trouble</td>
+                <td class="date-cell">03/18</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">14th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/381/7e8b2c07ef38195e29bf1d6deca47.jpg" width="50" height="50" alt="証拠"></td>
+                <td class="title-cell">証拠</td>
+                <td class="date-cell">06/24</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2021">
+        <h2 class="year-title">2021年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">15th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/872/34388c7bbd2caa74d83f2edeede3f.jpg" width="50" height="50" alt="週刊うまくいく曜日"></td>
+                <td class="title-cell">週刊うまくいく曜日</td>
+                <td class="date-cell">01/13</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">8th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/64c/95a2899945bb3871ef426f4630d74.jpg" width="50" height="50" alt="rainboW"></td>
+                <td class="title-cell">rainboW</td>
+                <td class="date-cell">03/17</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">16th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/b59/1cdddc4d2c46e81d65acf29c227de.jpg" width="50" height="50" alt="サムシング・ニュー"></td>
+                <td class="title-cell">サムシング・ニュー</td>
+                <td class="date-cell">05/05</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">17th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/5ce/282b29e0eca2752bccec7836271a8.jpg" width="50" height="50" alt="でっかい愛 / 喜怒愛楽"></td>
+                <td class="title-cell">でっかい愛 / 喜怒愛楽</td>
+                <td class="date-cell">07/28</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2022">
+        <h2 class="year-title">2022年</h2>
+        <table class="data-table">
+            <tr class="single">
+                <td class="type-label">18th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/120/2a96f1313b83f9d1e8e3ff52f335c.jpg" width="50" height="50" alt="黎明 / 進むしかねぇ"></td>
+                <td class="title-cell">黎明 / 進むしかねぇ</td>
+                <td class="date-cell">01/19</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">9th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/bbe/a77ce50b8adec2f6dd34c7dcb132c.jpg" width="50" height="50" alt="Mixed Juice"></td>
+                <td class="title-cell">Mixed Juice</td>
+                <td class="date-cell">03/09</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">19th Single</td>
+                <td class="jacket-cell"><img src="https://starto.jp/images/81/10e/6aa3a9f2b45471a91633ad8a0276f.jpg" width="50" height="50" alt="星の雨"></td>
+                <td class="title-cell">星の雨</td>
+                <td class="date-cell">08/03</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="year-section" data-year="2023">
+        <h2 class="year-title">2023年</h2>
+        <table class="data-table">
+            <tr class="album">
+                <td class="type-label">10th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/7ff/054a72fe660a812ca75a35f2cbe41.jpg" width="50" height="50" alt="POWER"></td>
+                <td class="title-cell">POWER</td>
+                <td class="date-cell">03/01</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">20th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/6ae/23d919126c6b24b1da0370a80f41a.jpg" width="50" height="50" alt="しあわせの花"></td>
+                <td class="title-cell">しあわせの花</td>
+                <td class="date-cell">06/07</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">21th Single</td>
+                <td class="jacket-cell"><img src="https://starto.jp/images/81/f19/704c7d82dab351f5c22b754188839.jpg" width="50" height="50" alt="絶体絶命 / Beautiful / AS ONE"></td>
+                <td class="title-cell">絶体絶命 / Beautiful / AS ONE</td>
+                <td class="date-cell">10/25</td>
+            </tr>
+        </table>
+    </div>
+        
+    <div class="year-section" data-year="2024">
+        <h2 class="year-title">2024年</h2>
+        <table class="data-table">
+            <tr class="album">
+                <td class="type-label">11th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/d16/8deb7514b819c736249956c0cdf86.jpg" width="50" height="50" alt="AWARD"></td>
+                <td class="title-cell">AWARD</td>
+                <td class="date-cell">03/13</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">22th Single</td>
+                <td class="jacket-cell"><img src="https://starto.jp/images/81/cc6/994340b258a3a70121a284f37f47e.jpg" width="50" height="50" alt="ハート / FATE"></td>
+                <td class="title-cell">ハート / FATE</td>
+                <td class="date-cell">04/24</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">23th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/1f9/4c041f0a98ba59e7057d7f741a4b1.jpg" width="50" height="50" alt="まぁいっか！"></td>
+                <td class="title-cell">まぁいっか！</td>
+                <td class="date-cell">09/10</td>
+            </tr>
+        </table>
+    </div>
+        
+    <div class="year-section" data-year="2025">
+        <h2 class="year-title">2025年</h2>
+        <table class="data-table">
+            <tr class="album">
+                <td class="type-label">12th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/842/aa5747f62f526e3cca3e2f39ffea2.jpg" width="50" height="50" alt="A.H.O. -Audio Hang Out-"></td>
+                <td class="title-cell">A.H.O. -Audio Hang Out-</td>
+                <td class="date-cell">03/12</td>
+            </tr>
+            <tr class="single">
+                <td class="type-label">24th Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/a6d/1b0b83e32a2d0075ed2bbea987264.jpg" width="50" height="50" alt="ウェッサイソウル！ / BIG LOVE SONG"></td>
+                <td class="title-cell">ウェッサイソウル！ / BIG LOVE SONG</td>
+                <td class="date-cell">05/07</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="year-section" data-year="2026">
+        <h2 class="year-title">2026年</h2>
+        <table class="data-table">
+            <tr class="digital">
+                <td class="type-label">1st Digital Single</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/f86/681d79de138c3297a14e191e0e5ad.jpg" width="50" height="50" alt="愛執"></td>
+                <td class="title-cell">愛執</td>
+                <td class="date-cell">01/19</td>
+            </tr>
+            <tr class="album">
+                <td class="type-label">13th ALBUM</td>
+                <td class="jacket-cell"><img src="https://www.elov-label.jp/images/45/402/bbe481c58761572fb4de1ff8bbf22.jpg" width="50" height="50" alt="唯一無二"></td>
+                <td class="title-cell">唯一無二</td>
+                <td class="date-cell">03/10</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <script src="CD.js"></script>
+    <footer class="back-home">
+        <a href="WEST..html" class="btn-back">WEST. 一覧へ戻る</a>
+    </footer>
+    </div>
+</body>
+</html>
