@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>野球観戦記録</title>
+    <link rel="stylesheet" href="baseball.css">
+</head>
+<body>
+    <h1>野球観戦記録⚾️</h1>
+
+    <a href="tigers.html">阪神タイガース(応援歌)</a>
+    <div class="filter-wrapper">
+        
+        <div class="filter-row">
+            <span class="filter-label">年：</span>
+            <div class="checkbox-group" id="year-checkboxes">
+                <label><input type="checkbox" value="2024" checked> 2024年</label>
+                <label><input type="checkbox" value="2025" checked> 2025年</label>
+                <label><input type="checkbox" value="2026" checked> 2026年</label>
+                <button type="button" class="select-all-btn" id="all-years-btn">全選択</button>
+            </div>
+        </div>
+
+        <div class="filter-row">
+            <span class="filter-label">結果：</span>
+            <div class="checkbox-group" id="result-checkboxes">
+                <label><input type="checkbox" value="win" checked> 勝ち(◯)</label>
+                <label><input type="checkbox" value="lose" checked> 負け(×)</label>
+                <label><input type="checkbox" value="draw" checked> 引き分け(-)</label>
+                <label><input type="checkbox" value="nocount" checked> ノーカウント(=)</label>
+                <button type="button" class="select-all-btn" id="all-results-btn">全選択</button>
+            </div>
+        </div>
+
+        <div class="filter-row">
+            <span class="filter-label">リーグ：</span>
+            <div class="radio-group" id="league-radios">
+                <label><input type="radio" name="league" value="all" checked> すべて</label>
+                <label><input type="radio" name="league" value="セ・リーグ"> セ・リーグ</label>
+                <label><input type="radio" name="league" value="パ・リーグ"> パ・リーグ</label>
+                <label><input type="radio" name="league" value="交流戦"> 交流戦</label>
+            </div>
+        </div>
+
+        <div class="filter-row" id="team-filter-row">
+            <span class="filter-label">チーム：</span>
+            <div class="tags-input-area">
+                <div class="selected-tags" id="team-tags"></div>
+                <select id="team-select" multiple>
+                    </select>
+            </div>
+        </div>
+    </div>
+    <div class="match-count" id="match-count-display">
+        全 0 件中 0 件を表示
+    </div>
+    
+    <div class="total-result" id="total-result-display">
+    0勝 0敗 0引き分け (0試合)
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>年</th>
+                    <th>日程</th>
+                    <th>対戦カード</th>
+                    <th>球場</th>
+                    <th>結果</th>
+                </tr>
+            </thead>
+            <tbody id="match-list">
+                <tr data-year="2024" data-league="交流戦" data-teams="DeNA,日ハム" data-result="draw">
+                    <td>2024</td>
+                    <td>3/8(木)</td>
+                    <td>横浜DeNAベイスターズ vs 北海道日本ハムファイターズ</td>
+                    <td>横浜スタジアム</td>
+                    <td><span class="draw">4-4 -</span></td>
+                </tr>
+                <tr data-year="2024" data-league="セ・リーグ" data-teams="ヤクルト,巨人" data-result="win">
+                    <td>2024</td>
+                    <td>4/11(木)</td>
+                    <td>東京ヤクルトスワローズ vs 読売ジャイアンツ</td>
+                    <td>明治神宮球場</td>
+                    <td><span class="win">0-5 ◯</span></td>
+                </tr>
+                <tr data-year="2024" data-league="セ・リーグ" data-teams="ヤクルト,巨人" data-result="win">
+                    <td>2024</td>
+                    <td>5/10(金)</td>
+                    <td>東京ヤクルトスワローズ vs 読売ジャイアンツ</td>
+                    <td>明治神宮球場</td>
+                    <td><span class="win">1-2 ◯</span></td>
+                </tr>
+                <tr data-year="2024" data-league="交流戦" data-teams="巨人,ソフトバンク" data-result="lose">
+                    <td>2024</td>
+                    <td>5/29(水)</td>
+                    <td>読売ジャイアンツ vs 福岡ソフトバンクホークス</td>
+                    <td>東京ドーム</td>
+                    <td><span class="lose">1-0 ×</span></td>
+                </tr>
+                <tr data-year="2024" data-league="交流戦" data-teams="ロッテ,阪神" data-result="lose">
+                    <td>2024</td>
+                    <td>6/1(土)</td>
+                    <td>千葉ロッテマリーンズ vs 阪神タイガース</td>
+                    <td>ZOZOマリンスタジアム</td>
+                    <td><span class="lose">3-2 ×</span></td>
+                </tr>
+                <tr data-year="2024" data-league="セ・リーグ" data-teams="巨人,ヤクルト" data-result="win">
+                    <td>2024</td>
+                    <td>6/23(日)</td>
+                    <td>読売ジャイアンツ vs 東京ヤクルトスワローズ</td>
+                    <td>東京ドーム</td>
+                    <td><span class="win">4-3 -</span></td>
+                </tr>
+                <tr data-year="2024" data-league="セ・リーグ" data-teams="巨人,カープ" data-result="draw">
+                    <td>2024</td>
+                    <td>8/7(水)</td>
+                    <td>読売ジャイアンツ vs 広島東洋カープ</td>
+                    <td>東京ドーム</td>
+                    <td><span class="draw">3-3 -</span></td>
+                </tr>
+                <tr data-year="2024" data-league="パ・リーグ" data-teams="ソフトバンク,オリックス" data-result="win">
+                    <td>2024</td>
+                    <td>8/27(火)</td>
+                    <td>福岡ソフトバンクホークス vs オリックス・バファローズ</td>
+                    <td>みずほPayPayドーム福岡</td>
+                    <td><span class="win">3-1 ◯</span></td>
+                </tr>
+                <tr data-year="2024" data-league="セ・リーグ" data-teams="ヤクルト,巨人" data-result="lose">
+                    <td>2024</td>
+                    <td>9/13(金)</td>
+                    <td>東京ヤクルトスワローズ vs 読売ジャイアンツ</td>
+                    <td>明治神宮球場</td>
+                    <td><span class="lose">7-2 ×</span></td>
+                </tr>
+                <tr data-year="2024" data-league="セ・リーグ" data-teams="ヤクルト,阪神" data-result="win">
+                    <td>2024</td>
+                    <td>9/28(土)</td>
+                    <td>東京ヤクルトスワローズ vs 阪神タイガース</td>
+                    <td>明治神宮球場</td>
+                    <td><span class="win">2-7 ◯</span></td>
+                </tr>
+                <tr data-year="2025" data-league="交流戦" data-teams="西武,阪神" data-result="win">
+                    <td>2025</td>
+                    <td>3/12(水)</td>
+                    <td>埼玉西武ライオンズ vs 阪神タイガース</td>
+                    <td>ベルーナドーム</td>
+                    <td><span class="win">2-3 ◯</span></td>
+                </tr>
+                <tr data-year="2025" data-league="交流戦" data-teams="西武,阪神" data-result="lose">
+                    <td>2025</td>
+                    <td>6/11(水)</td>
+                    <td>埼玉西武ライオンズ vs 阪神タイガース</td>
+                    <td>ベルーナドーム</td>
+                    <td><span class="lose">3-2 ×</span></td>
+                </tr>
+                <tr data-year="2025" data-league="セ・リーグ" data-teams="巨人,DeNA" data-result="nocount">
+                    <td>2025</td>
+                    <td>6/28(土)</td>
+                    <td>読売ジャイアンツ vs 横浜DeNAベイスターズ</td>
+                    <td>東京ドーム</td>
+                    <td><span class="nocount">5-0 =</span></td>
+                </tr>
+                <tr data-year="2025" data-league="パ・リーグ" data-teams="西武,ロッテ" data-result="win">
+                    <td>2025</td>
+                    <td>9/5(金)</td>
+                    <td>埼玉西武ライオンズ vs 千葉ロッテマリーンズ</td>
+                    <td>ベルーナドーム</td>
+                    <td><span class="win">5-3 ◯</span></td>
+                </tr>
+                <tr data-year="2025" data-league="パ・リーグ" data-teams="ロッテ,西武" data-result="lose">
+                    <td>2025</td>
+                    <td>9/23(火)</td>
+                    <td>千葉ロッテマリーンズ vs 埼玉西武ライオンズ</td>
+                    <td>ZOZOマリンスタジアム</td>
+                    <td><span class="lose">1-0 ×</span></td>
+                </tr>
+                <tr data-year="2025" data-league="パ・リーグ" data-teams="ロッテ,西武" data-result="lose">
+                    <td>2025</td>
+                    <td>9/24(水)</td>
+                    <td>千葉ロッテマリーンズ vs 埼玉西武ライオンズ</td>
+                    <td>ZOZOマリンスタジアム</td>
+                    <td><span class="lose">5-0 ×</span></td>
+                </tr>
+                <tr data-year="2026" data-league="セ・リーグ" data-teams="阪神,カープ" data-result="draw">
+                    <td>2026</td>
+                    <td>4/25(土)</td>
+                    <td>阪神タイガース vs 広島東洋カープ</td>
+                    <td>阪神甲子園球場</td>
+                    <td><span class="draw">2-2 -</span></td>
+                </tr>
+                <tr data-year="2026" data-league="セ・リーグ" data-teams="巨人,ヤクルト" data-result="lose">
+                    <td>2026</td>
+                    <td>5/6(水)</td>
+                    <td>読売ジャイアンツ vs 東京ヤクルトスワローズ</td>
+                    <td>東京ドーム</td>
+                    <td><span class="lose">0-5 ×</span></td>
+                </tr>
+                <tr data-year="2026" data-league="パ・リーグ" data-teams="西武,楽天" data-result="win">
+                    <td>2026</td>
+                    <td>5/8(金)</td>
+                    <td>埼玉西武ライオンズ vs 東北楽天ゴールデンイーグルス</td>
+                    <td>ベルーナドーム</td>
+                    <td><span class="win">4-2 ◯</span></td>
+                </tr>
+                <tr data-year="2026" data-league="セ・リーグ" data-teams="DeNA,中日" data-result="draw">
+                    <td>2026</td>
+                    <td>5/14(木)</td>
+                    <td>横浜DeNAベイスターズ vs 中日ドラゴンズ</td>
+                    <td>横浜スタジアム</td>
+                    <td><span class="draw">0-0 -</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script src="baseball.js"></script>
+</body>
+</html>
