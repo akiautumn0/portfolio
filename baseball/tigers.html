@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阪神タイガース</title>
+    <link rel="stylesheet" href="tigers.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>Tigers 応援歌</h1>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="選手名・背番号で検索...">
+        </div>
+
+        <nav class="category-nav">
+            <button class="nav-btn active" data-target="all">すべて</button>
+            <button class="nav-btn" data-target="catcher">捕手</button>
+            <button class="nav-btn" data-target="infielder">内野</button>
+            <button class="nav-btn" data-target="outfielder">外野</button>
+            <button class="nav-btn" data-target="chance">チャンテ</button>
+        </nav>
+    </header>
+
+    <main class="content-container" id="lyricsContainer"></main>
+
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="ページトップへ戻る">↑</button>
+
+    <script src="tigers.js"></script>
+</body>
+</html>
