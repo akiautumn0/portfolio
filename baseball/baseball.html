@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>野球観戦記録</title>
+    <link rel="stylesheet" href="baseball.css">
+</head>
+<body>
+    <h1>野球観戦記録⚾️</h1>
+
+    <a href="tigers.html">阪神タイガース(応援歌)</a>
+    <div class="filter-wrapper">
+        
+        <div class="filter-row">
+            <span class="filter-label">年：</span>
+            <div class="checkbox-group" id="year-checkboxes">
+                <label><input type="checkbox" value="2024" checked> 2024年</label>
+                <label><input type="checkbox" value="2025" checked> 2025年</label>
+                <label><input type="checkbox" value="2026" checked> 2026年</label>
+                <button type="button" class="select-all-btn" id="all-years-btn">全選択</button>
+            </div>
+        </div>
+
+        <div class="filter-row">
+            <span class="filter-label">結果：</span>
+            <div class="checkbox-group" id="result-checkboxes">
+                <label><input type="checkbox" value="win" checked> 勝ち(◯)</label>
+                <label><input type="checkbox" value="lose" checked> 負け(×)</label>
+                <label><input type="checkbox" value="draw" checked> 引き分け(-)</label>
+                <button type="button" class="select-all-btn" id="all-results-btn">全選択</button>
+            </div>
+        </div>
+
+        <div class="filter-row">
+            <span class="filter-label">リーグ：</span>
+            <div class="radio-group" id="league-radios">
+                <label><input type="radio" name="league" value="all" checked> すべて</label>
+                <label><input type="radio" name="league" value="セ・リーグ"> セ・リーグ</label>
+                <label><input type="radio" name="league" value="パ・リーグ"> パ・リーグ</label>
+                <label><input type="radio" name="league" value="交流戦">交流戦</label>
+                <label><input type="radio" name="league" value="オープン戦">オープン戦</label>
+            </div>
+        </div>
+
+        <div class="filter-row">
+            <span class="filter-label">球場：</span>
+            <div class="tags-input-area">
+                <div class="selected-tags" id="stadium-tags"></div>
+                <select id="stadium-select">
+                    <option value="" disabled selected>選択してください...</option>
+                    <option value="東京ドーム">東京ドーム</option>
+                    <option value="明治神宮球場">明治神宮球場</option>
+                    <option value="横浜スタジアム">横浜スタジアム</option>
+                    <option value="バンテリンドーム ナゴヤ">バンテリンドーム ナゴヤ</option>
+                    <option value="阪神甲子園球場">阪神甲子園球場</option>
+                    <option value="MAZDA Zoom-Zoom スタジアム広島">MAZDA Zoom-Zoom スタジアム広島</option>
+                    <option value="エスコンフィールドHOKKAIDO">エスコンフィールドHOKKAIDO</option>
+                    <option value="楽天モバイル 最強パーク宮城">楽天モバイル 最強パーク宮城</option>
+                    <option value="ベルーナドーム">ベルーナドーム</option>
+                    <option value="ZOZOマリンスタジアム">ZOZOマリンスタジアム</option>
+                    <option value="京セラドーム大阪">京セラドーム大阪</option>
+                    <option value="みずほPayPayドーム福岡">みずほPayPayドーム福岡</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filter-row" id="team-filter-row">
+            <span class="filter-label">チーム：</span>
+            <div class="tags-input-area">
+                <div class="selected-tags" id="team-tags"></div>
+                <select id="team-select" multiple>
+                    </select>
+            </div>
+        </div>
+    </div>
+    <div class="match-count" id="match-count-display">
+        全 0 件中 0 件を表示
+    </div>
+    
+    <div class="total-result" id="total-result-display">
+    0勝 0敗 0引き分け (0試合)
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>年</th>
+                    <th>日程</th>
+                    <th>区分</th>
+                    <th>対戦カード</th>
+                    <th>球場</th>
+                    <th>結果</th>
+                </tr>
+            </thead>
+            <tbody id="match-list">
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script src="baseball.js"></script>
+</body>
+</html>
